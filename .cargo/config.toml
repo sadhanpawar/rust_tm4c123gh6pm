@@ -1,0 +1,10 @@
+[build]
+target = "thumbv7em-none-eabi"
+
+[target.thumbv7em-none-eabi]
+runner = "arm-none-eabi-gdb"
+linker = "arm-none-eabi-ld"
+rustflags = ["-C", "link-arg=-Tlink.x"]
+
+[unstable]
+build-std = ["core"]

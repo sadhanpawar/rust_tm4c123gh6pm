@@ -5,4 +5,16 @@ edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[profile.release]
+panic = "abort"
+
+[profile.dev]
+debug = true
+opt-level = 0
+
 [dependencies]
+cortex-m = "0.7" 
+cortex-m-rt = "0.7"
+panic-halt = "0.2.0"
+tm4c123x-hal = "0.10.3"
+embedded-hal = "0.2.6"
